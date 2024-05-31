@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Survival Achievements</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="achievements-wrapper" style="display: none;">
+        <button id="closeUiButton">X</button>
+        <div class="achievements-banner">
+            <img src="images/banner_image.png" alt="Achievement Banner"> <!-- Ensure the image path is correct -->
+        </div>
+        <div class="achievements-content">
+            <table class="achievements-table">
+                <thead>
+                    <tr>
+                        <th class="achievements-header">Image</th>
+                        <th class="achievements-header">Title</th>
+                        <th class="achievements-header">Description</th>
+                        <th class="achievements-header">Progress</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Achievements will be added here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="achievement-notification" class="achievement-notification">
+        <div class="notification-content">
+            <img id="achievement-image" src="" alt="Achievement Image" class="achievement-icon">
+            <div class="text-content">
+                <p class="achievement-header">Achievement Earned</p>
+                <p id="achievement-title" class="achievement-title"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
