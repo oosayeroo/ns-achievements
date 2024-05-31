@@ -160,21 +160,21 @@ function EarnAchievement(src,code)
                 TriggerClientEvent('ns-achievements:AchievementEarned', src, code)
                 local final = json.encode(calltable)
                 MySQL.update('UPDATE achievements SET myachievements = ? WHERE citizenid = ?', { final, cid }) 
-                if checktable.reward ~= nil then
-                    if checktable.reward.type ~= nil and checktable.reward.amount ~= nil then
-                        if checktable.reward.type == 'cash' then
-                            Player.Functions.AddMoney('cash',checktable.reward.amount)
-                        elseif checktable.reward.type == 'bank' then
-                            Player.Functions.AddMoney('bank', checktable.reward.amount)
-                        elseif checktable.reward.type == 'item' and checktable.reward.item ~= nil then
-                            Player.Functions.AddItem(checktable.reward.item, checktable.reward.amount)
-                        elseif checktable.reward.type == 'other' then
-                            print("YOU NEED TO ADD YOUR CUSTOM EVENT/ ACTION IN SERVER.LUA")
-                        else
-                            print("reward triggerred with invalid type")
-                        end
-                    end
-                end
+                -- if checktable.reward ~= nil then
+                --     if checktable.reward.type ~= nil and checktable.reward.amount ~= nil then
+                --         if checktable.reward.type == 'cash' then
+                --             Player.Functions.AddMoney('cash',checktable.reward.amount)
+                --         elseif checktable.reward.type == 'bank' then
+                --             Player.Functions.AddMoney('bank', checktable.reward.amount)
+                --         elseif checktable.reward.type == 'item' and checktable.reward.item ~= nil then
+                --             Player.Functions.AddItem(checktable.reward.item, checktable.reward.amount)
+                --         elseif checktable.reward.type == 'other' then
+                --             print("YOU NEED TO ADD YOUR CUSTOM EVENT/ ACTION IN SERVER.LUA")
+                --         else
+                --             print("reward triggerred with invalid type")
+                --         end
+                --     end
+                -- end
 
                             
             else

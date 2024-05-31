@@ -56,11 +56,11 @@ function CloseUI() {
     const wrapper = document.querySelector('.achievements-wrapper');
     wrapper.style.display = 'none';
 
-    // Data to be sent to the server
+    
     const data = JSON.stringify({ close: true });
 
     Open = false;
-    // Use sendBeacon to ensure the data is sent even when the page unloads
+    
     if (!navigator.sendBeacon('https://ns-achievements/close-ui', data)) {
         console.error('Beacon send failed.');
     }
